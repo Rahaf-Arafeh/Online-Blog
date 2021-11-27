@@ -1,0 +1,189 @@
+*{
+  margin:0;
+  padding:0;
+}
+html{
+  scroll-behavior: smooth;
+}
+/* Navbar */
+.navbar{
+  font-family: century;
+  background-color:black;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.7rem 2rem;
+  z-index: 1;
+  margin-bottom: 1rem;
+}
+.navbar ul{
+  display: flex;
+  width: 20%;
+  align-items: center;
+  justify-content: space-between;
+
+}
+.navbar ul li a{
+  font-family: century;
+  text-decoration: none;
+  color:pink;
+}
+.navbar ul li a:hover{
+  cursor: pointer;
+  color:white;
+}
+.navbar h1{
+  color:pink;
+}
+/* Home */
+.home{
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  flex-wrap: wrap;
+  gap: 3rem;
+  padding-top: 2rem;
+}
+.home .image {
+  flex: 0.5 0.3 33rem;
+  margin-right:1em;
+}
+.home .image img{
+  width: 80%;
+  height: 80%;
+  border-radius: 30px;
+}
+.home .content {
+  flex: 1 1 45rem;
+  align-items: center;
+}
+.desc{
+  font-family: century;
+  font-size: 2rem;
+  text-align: center;
+  margin: 40px 0px;
+}
+.pink-span{
+  color:pink;
+}
+/* 
+.home .content h1{
+  font-size: 4.5rem;
+  color:black;
+  line-height: 1.8;
+} */
+.far fa-heart{
+  color:pink;
+  font-size: 1em;
+}
+.footer{
+  /* display: flex;
+  justify-content: space-around;
+  background-color: black;
+  padding: 3rem; */
+  font-family: century;
+  justify-content: center;
+  background-color: black;
+  color: pink;
+  padding: 40px;
+}
+.footer ul{
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0; 
+  list-style: none;
+  /* justify-content: space-between; */
+
+  width: 20%;
+}
+.footer ul li a{
+  /* color: pink;
+ text-decoration: none;} */
+ font-family: century;
+ text-decoration: none;
+ color: pink;
+ padding: 5px 18px;
+ transition: all 0.5s ease;}
+ 
+ .footer ul li a:hover{
+   cursor: pointer;
+  color: white;
+ }
+
+.footer h1{
+  color:pink;
+} 
+.form{
+  display:flex;
+  flex-direction: column;
+  gap:0.5em;
+  align-items:center;
+margin-top: 3rem;
+margin-bottom: 5rem;
+  /* margin-bottom: 10px;
+  padding-bottom: 20px; */
+  /* position: relative; */
+}
+.form label{
+  font-family: century;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+.form input{
+  border: 2px solid pink;
+  border-radius: 4px;
+  display: block;
+  font-family: inherit;
+  font-size: 14px;
+  padding: 10px;
+  width: 50%;
+}
+.form textarea{
+  border: 2px solid pink;
+  border-radius: 4px;
+  display: block;
+  font-family: inherit;
+  font-size: 14px;
+  padding: 10px;
+  width: 50%;
+}
+.form input:focus {
+  outline: 0;
+  border-color: #777;
+}
+.btn{
+  width:20%;
+  padding: 1em;
+  margin-top: 1em;
+  color:pink;
+  font-weight: bold;
+  background-color: black;
+  border: none;
+  border-radius: 10px;
+}
+.container{
+  /* padding:1em;
+  margin:0.5em;
+  border:#ccc 1px dotted;
+  justify-content: center;
+ width:50%; */
+ max-width: 1100px;
+ margin: auto;
+ /* overflow: hidden; */
+ border:#ccc 1px dotted;
+ padding: 0 2rem;
+}
+.comment{
+  /* border:solid 2px #ccc ; */
+  border-width: 100%;
+}
+#commentInput{
+  border: 2px solid pink;
+  border-radius: 4px;
+  display: block;
+  font-family: inherit;
+  font-size: 14px;
+  padding: 10px;
+  width: 50%;
+
+}
+
