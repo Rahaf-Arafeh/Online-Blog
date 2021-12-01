@@ -6,19 +6,15 @@ export class Register extends Component {
         email: '',
         password: ''
     }
-    userDataArr = [this.state];
+    userDataArr = [];
     onChange = (event) => {
-        if (event.target.name === 'username')
-            this.setState({ username: event.target.value });
-        else if (event.target.name === 'email')
-            this.setState({ email: event.target.value });
-        else if (event.target.name === 'password')
-            this.setState({ password: event.target.value })
+        this.setState({ [event.target.name]: event.target.value });
     }
     onSubmit = (event) => {
         event.preventDefault();
+        this.userDataArr.push(this.state);
         if (!localStorage.getItem('user')) {
-            localStorage.setItem('user', JSON.stringify(this.userDataArr))
+            localStorage.setItem('user', JSON.stringify(this.userDataArr));
         }
         else {
             let storage = JSON.parse(localStorage.getItem("user"));
@@ -32,11 +28,12 @@ export class Register extends Component {
                 <div className='content'>
                     <form className='form' onSubmit={this.onSubmit}>
                         <label>Enter Your Name :</label>
-                        <input type='text' name='username' value={this.state.username} onChange={this.onChange} />
+                        <input type='text' name='username' value={this.state.username} onChange={this.onChange} pattern="[A-Za-z]{3,10}" title="must contain at least 3 letters and at most 10 letters " required />
                         <label>Enter Your email :</label>
                         <input type='email' name='email' value={this.state.email} onChange={this.onChange} />
                         <label>Enter Your Password :</label>
-                        <input type='password' name='password' value={this.state.password} onChange={this.onChange} />
+                        <input type='password' name='password' value={this.state.password} onChange={this.onChange} pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                            title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters" required />
                         <button type="submit" className="btn btn-primary" id='signUp-btn'>Sign Up</button>
                     </form>
                 </div>

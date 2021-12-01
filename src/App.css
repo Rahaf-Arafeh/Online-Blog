@@ -55,6 +55,7 @@ html{
 .home .content {
   flex: 1 1 45rem;
   align-items: center;
+  line-height:2em; 
 }
 .desc{
   font-family: century;
